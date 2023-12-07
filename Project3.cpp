@@ -94,15 +94,16 @@ class Queue {
                     std::reverse(chunk.begin(), chunk.end()); // reverse chunk back to original message
                     afterMsg += chunk;
                     queue.pop_back();
-        }
-    }
+                }
+            }
+            std::cout << "The message is: " << afterMsg << std::endl;
 }
     private: 
         std::vector<std::string> queue;
 };
 // Add class Queue here
 // Remove comments before testing and do not change anything in main function
-void main(){
+int main(){
 Stack s1;
 s1.validPara("(([]))");
 s1.minPara("(([]))");
@@ -154,4 +155,5 @@ q1.enqueue("I forgot my password and can't reset it. Help, please! Do you provid
 q1.processMsg();
 q1.enqueue("The software update is causing issues on my computer. The response time on your website is very slow.");
 q1.processMsg();
+return 0;
 }
